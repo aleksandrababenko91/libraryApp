@@ -1,0 +1,246 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Finnish Way",
+      "author": "Katia Pintzar",
+      "ISBN": "1234567890",
+      "url": "../Project/images/book1.webp",
+      "copies": [
+        {
+          "id": 1,
+          "borrower": 1,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 2,
+          "borrower": 2,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 3,
+          "borrower": null,
+          "borrowedDate": null,
+          "dueDate": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Talon Rakennus",
+      "author": "Juha J.",
+      "ISBN": "1234567890",
+      "url": "../Project/images/book3.webp",
+      "copies": [
+        {
+          "id": 1,
+          "borrower": 1,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 2,
+          "borrower": 2,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 3,
+          "borrower": null,
+          "borrowedDate": null,
+          "dueDate": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Tampere Silloin Ennen",
+      "author": "Jani Niemella",
+      "ISBN": "1234567890",
+      "url": "../Project/images/book4.webp",
+      "copies": [
+        {
+          "id": 1,
+          "borrower": 1,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 2,
+          "borrower": 2,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 3,
+          "borrower": null,
+          "borrowedDate": null,
+          "dueDate": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Finnish Way",
+      "author": "Katia Pintzar",
+      "ISBN": "1234567890",
+      "url": "../Project/images/book1.webp",
+      "copies": [
+        {
+          "id": 1,
+          "borrower": 1,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 2,
+          "borrower": 2,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 3,
+          "borrower": null,
+          "borrowedDate": null,
+          "dueDate": null
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Capri.Dolce Vita",
+      "author": "Assouline",
+      "ISBN": "1234567890",
+      "url": "../Project/images/book5.webp",
+      "copies": [
+        {
+          "id": 1,
+          "borrower": 1,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 2,
+          "borrower": 2,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        },
+        {
+          "id": 3,
+          "borrower": null,
+          "borrowedDate": null,
+          "dueDate": null
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Room Escape",
+      "author": "Unknown",
+      "ISBN": "6666666",
+      "url": "../Project/images/book6.webp",
+      "copies": [
+        {
+          "id": 1,
+          "borrower": 2,
+          "borrowedDate": "2023-12-04",
+          "dueDate": "2023-12-14"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Jarkko",
+      "password": 12345,
+      "email": "jarkko@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Aleksandra",
+      "password": 12346,
+      "email": "aleks@gmail.com"
+    },
+    {
+      "name": "hhhggggg",
+      "email": "hhhggggg",
+      "password": "hhhggggg",
+      "id": 3
+    },
+    {
+      "name": "hhhggggg",
+      "email": "hhhggggg",
+      "password": "hhhggggg",
+      "id": 4
+    },
+    {
+      "name": "hhhggggg",
+      "email": "hhhggggg",
+      "password": "hhhggggg",
+      "id": 5
+    },
+    {
+      "name": "hhhggggg",
+      "email": "hhhggggg",
+      "password": "hhhggggg",
+      "id": 6
+    },
+    {
+      "name": "name",
+      "email": "name",
+      "password": "name",
+      "id": 7
+    },
+    {
+      "name": "evgeny@gmail.com",
+      "email": "evgeny@gmail.com",
+      "password": "evgeny@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "gggggggg",
+      "email": "gggggggg",
+      "password": "gggggggg",
+      "id": 9
+    },
+    {
+      "name": "Alex",
+      "email": "alex@gamil.com",
+      "password": "12345",
+      "id": 10
+    },
+    {
+      "name": "Alex",
+      "email": "alex@gamil.com",
+      "password": "12345",
+      "id": 11
+    },
+    {
+      "name": "Alex",
+      "email": "alex@gamil.com",
+      "password": "12345",
+      "id": 12
+    },
+    {
+      "name": "hhhh",
+      "email": "alex@gamil.com",
+      "password": "12345",
+      "id": 13
+    },
+    {
+      "name": "hhhh",
+      "email": "alex@gamil.com",
+      "password": "12345",
+      "id": 14
+    },
+    {
+      "name": "hhhh",
+      "email": "alex@gamil.com",
+      "password": "12345",
+      "id": 15
+    }
+  ]
+}
