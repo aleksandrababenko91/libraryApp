@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from 'react'
 import PropTypes from 'prop-types';
+import BookService from './BookService'
 
 
-
-const RegisterForm = ({addUser}) => {
+const RegisterForm = () => {
+  const [newUser, setNewUser] = useState([])
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
@@ -37,7 +38,19 @@ const RegisterForm = ({addUser}) => {
     const userInfo = {email:email, name:name, password:password}
     console.log(userInfo);
   }
-    
+  
+  const addUser = (email, name, password) => {
+    const userInfo = {
+      name: name,
+      email: email,
+      password: password
+    }
+    BookService
+      .create(userInfo)
+       .then(returnedUser => {
+       setNewUser([...newUser, returnedUser])
+      })
+  }
   
   return (
     <form>

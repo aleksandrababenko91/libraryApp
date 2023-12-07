@@ -5,7 +5,7 @@
       "title": "Finnish Way",
       "author": "Katia Pintzar",
       "ISBN": "1234567890",
-      "url": "../Project/images/book1.webp",
+      "url": "../",
       "copies": [
         {
           "id": 1,
@@ -241,6 +241,12 @@
       "email": "alex@gamil.com",
       "password": "12345",
       "id": 15
+    },
+    {
+      "name": "ffffffff",
+      "email": "fffffff",
+      "password": "ffffffff",
+      "id": 16
     }
   ]
 }

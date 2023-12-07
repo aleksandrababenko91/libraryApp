@@ -1,9 +1,10 @@
 import axios from 'axios'
 
 const baseUrl = "http://localhost:3001/users"
+const bookUrl = "http://localhost:3001/books"
 
-const getAll = () => {
-  const request = axios.get(baseUrl)
+const getAllBooks = () => {
+  const request = axios.get(bookUrl)
   return(
     request.then(response => response.data)
   )
@@ -24,4 +25,4 @@ const remove = (id) => {
   const request = axios.delete(`${baseUrl}/${id}`);
   return request.then(response => response.data);
 };
-export default {getAll, create, update, remove }
+export default {getAllBooks, create, update, remove }
