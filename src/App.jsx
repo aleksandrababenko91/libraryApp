@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import MainPage from './components/MainPage';
 import BookList from './components/BookList'
-import { UserLogin } from './components/UserLogIn';
+import UserLoginForm from './components/UserLoginForm';
 import { useState, useEffect } from 'react'
 import NavBar from './components/NavBar';
 
@@ -19,7 +19,6 @@ function App() {
   const handleLogOut = () => {
     setUserLogin(false)
   }
-  const padding = { padding: 10 }
 
 
   return (
@@ -29,9 +28,9 @@ function App() {
     </div>
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="/RegisterForm" element={<RegisterForm  handleLogIn={handleLogIn}/>} />
+      <Route path="/RegisterForm" element={<RegisterForm  handleLogIn={handleLogIn} />} />
       <Route path="/BookList" element={<BookList />} />
-      <Route path="/UserLogin" element={<UserLogin />} />
+      <Route path="/UserLoginForm" element={<UserLoginForm handleLogIn={handleLogIn}/>} />
     </Routes>
     </Router>
     

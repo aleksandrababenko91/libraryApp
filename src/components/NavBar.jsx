@@ -37,6 +37,11 @@ const NavBar = ({userLogin, handleLogOut}) => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link  to="/RegisterForm" className="nav-link">
+                Register Form
+              </Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="#">
                 My Profile
               </a>
@@ -46,7 +51,7 @@ const NavBar = ({userLogin, handleLogOut}) => {
                 Log Out
               </button>
             </li> : <li className="nav-item">
-              <Link to="/RegisterForm" className="nav-link">
+              <Link to="/UserLoginForm" className="nav-link">
                 Log In
               </Link>
             </li>}
