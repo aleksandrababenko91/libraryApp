@@ -9,6 +9,13 @@ const getAllBooks = () => {
     request.then(response => response.data)
   )
 }
+const getUserWithEmailAndPassword = (email, password) => {
+  const request = axios.get(baseUrl, { params: {email: email, password: password}} )
+  return(
+    request.then(response => response.data)
+  )
+}
+
 const create = (newObject) => {
  const request = axios.post(baseUrl, newObject)
  return (
@@ -25,4 +32,4 @@ const remove = (id) => {
   const request = axios.delete(`${baseUrl}/${id}`);
   return request.then(response => response.data);
 };
-export default {getAllBooks, create, update, remove }
+export default {getUserWithEmailAndPassword, getAllBooks, create, update, remove }

@@ -217,7 +217,18 @@
       "name": "Aleksandra",
       "password": 12346,
       "email": "aleks@gmail.com"
+    },
+    {
+      "name": "petri",
+      "email": "petri@gmaicl.ocm",
+      "password": "alex01",
+      "id": 3
+    },
+    {
+      "name": "petri",
+      "email": "petri@gmail.com",
+      "password": "petri",
+      "id": 4
     }
-    
   ]
 }

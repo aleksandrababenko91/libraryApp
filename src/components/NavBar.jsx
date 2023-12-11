@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 
 
-const NavBar = ({userLogin, handleLogOut}) => {
+const NavBar = ({currentUser, handleLogOut}) => {
 
   
   return(
@@ -46,7 +46,7 @@ const NavBar = ({userLogin, handleLogOut}) => {
                 My Profile
               </a>
             </li>
-            {userLogin ? <li className="nav-item">
+            {currentUser ? <li className="nav-item">
               <button onClick={handleLogOut} className="nav-link">
                 Log Out
               </button>

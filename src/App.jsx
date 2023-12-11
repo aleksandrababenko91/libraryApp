@@ -9,22 +9,28 @@ import BookList from './components/BookList'
 import UserLoginForm from './components/UserLoginForm';
 import { useState, useEffect } from 'react'
 import NavBar from './components/NavBar';
+import BookService from './components/BookService';
+
 
 
 function App() {
-  const [userLogin, setUserLogin] = useState(false)
-  const handleLogIn = () => {
-    setUserLogin(true)
+  const [currentUser, setCurrentUser] = useState(null);
+  const handleLogIn = async (email, password) => {
+    const response = await BookService.getUserWithEmailAndPassword(email, password);
+    if (response.length === 0) {
+      console.log("User not found or wrong password!");;
+      return; // Returning here to exit the function
+    }
+    setCurrentUser(response[0]); // Response is an array so we get the user object from the first index of it
   }
   const handleLogOut = () => {
-    setUserLogin(false)
+    setCurrentUser(null);
   }
-
 
   return (
     <Router>
     <div className="App">
-    <NavBar userLogin={userLogin} handleLogOut={handleLogOut}></NavBar>
+    <NavBar currentUser={currentUser} handleLogOut={handleLogOut}></NavBar>
     </div>
     <Routes>
       <Route path="/" element={<MainPage />} />

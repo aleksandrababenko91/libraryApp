@@ -3,11 +3,8 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Form, Button } from 'react-bootstrap';  
 
-
 const UserLoginForm = ({handleLogIn}) => {
-  
   const [email, setEmail] = useState("")
-  const [name, setName] = useState("")
   const [password, setPassword] = useState("")
   const [errors, setErrors] = useState({})
   const handleErrors = () => {
@@ -15,9 +12,7 @@ const UserLoginForm = ({handleLogIn}) => {
     if(email.length < 5) {
       currentErrors.email = "Email must include at least 5 letters"
     }
-    if(name.length < 1) {
-      currentErrors.name = "Name must include at least 1 letter"
-    }
+    
     if(password.length < 5) {
       currentErrors.password = "Password maust include at least 5 letetrs"
     }
@@ -34,13 +29,13 @@ const UserLoginForm = ({handleLogIn}) => {
       console.log(errors);
       return
     }
-    handleLogIn()
-    const userInfo = {email:email, name:name, password:password}
+    handleLogIn(email,password)
+    const userInfo = {email:email, password:password}
     console.log(userInfo);
   }
-  
-  
-  
+ 
+
+    
   return (
     <Container fluid>
       <Form onSubmit={handleSubmit}>
@@ -56,17 +51,7 @@ const UserLoginForm = ({handleLogIn}) => {
           {errors.email && <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>}
         </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            name="name"
-            type="text"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            isInvalid={!!errors.name}
-          />
-          {errors.name && <Form.Control.Feedback type="invalid">{errors.name}</Form.Control.Feedback>}
-        </Form.Group>
+        
 
         <Form.Group className="mb-3">
           <Form.Label>Password</Form.Label>
