@@ -29,7 +29,7 @@ const UserLoginForm = ({handleLogIn}) => {
       console.log(errors);
       return
     }
-    handleLogIn(email,password)
+    handleLogIn(email, password)
     const userInfo = {email:email, password:password}
     console.log(userInfo);
   }

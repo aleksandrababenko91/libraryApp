@@ -42,9 +42,9 @@ const NavBar = ({currentUser, handleLogOut}) => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link  to="/MyProfile" className="nav-link">
                 My Profile
-              </a>
+              </Link>
             </li>
             {currentUser ? <li className="nav-item">
               <button onClick={handleLogOut} className="nav-link">

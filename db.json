@@ -9,19 +9,19 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 1,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 2,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
-          "borrower": null,
+          "borrower": 5,
           "borrowedDate": null,
           "dueDate": null
         }
@@ -29,26 +29,26 @@
     },
     {
       "id": 2,
-      "title": "Talon Rakennus",
+      "title": "Vivre la vie",
       "author": "Juha J.",
       "ISBN": "1234567890",
       "url": "https://i.dummyjson.com/data/products/1/2.jpg",
       "copies": [
         {
           "id": 1,
-          "borrower": 1,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 2,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
-          "borrower": null,
+          "borrower": 5,
           "borrowedDate": null,
           "dueDate": null
         }
@@ -63,19 +63,19 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 1,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 2,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
-          "borrower": null,
+          "borrower": 5,
           "borrowedDate": null,
           "dueDate": null
         }
@@ -83,20 +83,20 @@
     },
     {
       "id": 4,
-      "title": "Finnish Way",
+      "title": "Ukrainan sota",
       "author": "Katia Pintzar",
       "ISBN": "1234567890",
       "url": "https://i.dummyjson.com/data/products/1/1.jpg",
       "copies": [
         {
           "id": 1,
-          "borrower": 1,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 2,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -117,13 +117,13 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 1,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 2,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -144,7 +144,7 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 2,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         }
@@ -159,13 +159,13 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 1,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 2,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -179,20 +179,20 @@
     },
     {
       "id": 8,
-      "title": "Talon Rakennus",
+      "title": "Suomi",
       "author": "Juha J.",
       "ISBN": "1234567890",
       "url": "https://i.dummyjson.com/data/products/1/1.jpg",
       "copies": [
         {
           "id": 1,
-          "borrower": 1,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 2,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -229,6 +229,12 @@
       "email": "petri@gmail.com",
       "password": "petri",
       "id": 4
+    },
+    {
+      "name": "saara",
+      "email": "saarasairanen@gmail.com",
+      "password": "saara",
+      "id": 5
     }
   ]
 }

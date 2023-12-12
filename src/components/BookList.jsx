@@ -1,18 +1,6 @@
-import BookService from './BookService'
-import { useState, useEffect } from 'react'
 
-
-const BookList = () => {
-  const [books, setBooks] = useState([])
-
-  useEffect(() => {
-    BookService
-      .getAllBooks()
-       .then(initialBooks => {
-        setBooks(initialBooks)
-      })
-  }, []);
-
+const BookList = ({books, addBook}) => {
+  
   const bookCardStyle = {
     background: 'pink',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -22,10 +10,12 @@ const BookList = () => {
   };
 
   
+  
+  
 
   return(
     
-<div >
+<div>
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }} >
     { books.map(book => (
         <div key={book.id} style={bookCardStyle}>
@@ -35,7 +25,7 @@ const BookList = () => {
             <h3 className='mt-2 text-gray-600'>Author:{book.author}</h3>
           </div>
           <div className='mt-6 flex justify-between items-center'>
-            <button className='px-4 py-2 bg-gray-800 text-black text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700'>Add to cart</button>
+            <button onClick={() => addBook(book.id)} className='px-4 py-2 bg-gray-800 text-black text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700'>Add to cart</button>
           </div>
         </div>
       ))
@@ -43,6 +33,6 @@ const BookList = () => {
   </div>
 </div>
   )}
-
+  
 export default BookList
 
