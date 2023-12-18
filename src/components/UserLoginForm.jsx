@@ -37,10 +37,12 @@ const UserLoginForm = ({handleLogIn, currentUser}) => {
     setSuccessMessage('Welcome ');
 
   }
-  
+ 
+
+ 
   return (
     <Container fluid>
-      {successMessage && <Alert variant="success">{successMessage}, {currentUser.name}</Alert>}
+      {successMessage && <Alert variant="success">{successMessage}</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>
