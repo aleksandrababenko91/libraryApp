@@ -56,7 +56,7 @@ const RegisterForm = ({handleLogIn}) => {
   }
   
   return (
-    <Container fluid>
+    <Container fluid >
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>
