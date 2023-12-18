@@ -9,19 +9,19 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": null,
           "dueDate": null
         }
@@ -48,7 +48,7 @@
         },
         {
           "id": 3,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": null,
           "dueDate": null
         }
@@ -63,19 +63,19 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": null,
           "dueDate": null
         }
