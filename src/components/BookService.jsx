@@ -22,7 +22,7 @@ const create = (newObject) => {
    request.then(response => response.data)
  )
 }
-const update = (id, updateBook) => {
+const update = (id, updateBook) => {  
  const request = axios.put(`${bookUrl}/${id}`, updateBook)
  return(
    request.then(response => {response.data})

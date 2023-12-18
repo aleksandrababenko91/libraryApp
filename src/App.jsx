@@ -19,7 +19,7 @@ function App() {
   const [books, setBooks] = useState([])
   const handleLogIn = async (email, password) => {
     const response = await BookService.getUserWithEmailAndPassword(email, password);
-    console.log(response);
+    //console.log(response);
     if (response.length === 0) {
       console.log("User not found or wrong password!");
       return; // Returning here to exit the function

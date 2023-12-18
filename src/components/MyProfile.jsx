@@ -1,32 +1,63 @@
 import { Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
 
 
 const MyProfile = ({currentUser, books}) => {
-  
   const myCopies = books.filter(book => book.copies.some(copy => copy.borrower === currentUser.id))
-  
-    console.log(myCopies);
-   
-
-  
+  console.log(myCopies);
+ 
   return(
-
-      <div className="px-4 pt-5 my-5 text-right">
+      <div>
         <h1 className="display-4 fw-bold text-body-emphasis">Hello, {currentUser.name} </h1>
-        <h2 className="pt-5 pb-4">Books: </h2>
-        <h2 className="pt-5 pb-4">User name: {currentUser.name}</h2>
-        <h2 className="pt-5 pb-4">User email: {currentUser.email}</h2>
-        <div className="d-flex justify-content-between align-items-center border-bottom py-3">
-          <h2 className="p-3">Book: {myCopies.map(book => book.title)} </h2>
-          <h2 className="p-3">Borrow date:</h2>
-          <h2 className="p-3">Due Date:</h2>
-          <Button>Return book</Button>
-          <Button>Extend book</Button>
-        </div>
-      </div>
-    
+        {/* <h2 className="p-3">Book: {myCopies.map(book => book.title)} </h2> */}
+        <Container className="container">
+          <Row>
+          <Col>
+           <table className="table table-striped">
+             <thead>
+               <tr>
+                 <th scope="col">User info:</th>
+               </tr>
+             </thead>
+             <tbody>
+                 <tr>Name:  {currentUser.name}</tr>
+                 <tr>Email:  {currentUser.email}</tr>
+                 <tr>Password:  {currentUser.password}</tr>
+             </tbody>
+           </table>
+          </Col>
+          <Col>
+          <table className="book-info">
+             <thead>
+               <tr>
+                 <th scope="col">Books:</th>
+                 <th scope="col">Borrow date</th>
+                 <th scope="col">Due date:</th>
+                 <th scope="col">PIC OF BOOK</th>
+               </tr>
+             </thead>
+             <tbody>
+              {myCopies.map((book) => 
+               <tr key={book}>
+                 <th>{book.title}</th>
+                 {/* <td>{book.url}</td> */}
+                 <td>{book.copies.borrowedDate}</td>
+                 <td>{book.copies.dueDate}</td>
+                 <td><Button>Return book</Button></td>
+                 <td><Button>Extend book</Button></td>
+               </tr>
+                )}
+             </tbody>
+           </table>
+          </Col>
+            </Row>
+          </Container>
+          </div>
+          
+
   )
 }
-
-
 export default MyProfile
