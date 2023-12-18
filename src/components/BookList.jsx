@@ -2,16 +2,12 @@
 const BookList = ({books, addBook}) => {
   
   const bookCardStyle = {
-    background: 'pink',
+    background: '#e9e4ab',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
     borderRadius: '8px',
     padding: '20px',
     marginRight: '20px',
   };
-
-  
-  
-  
 
   return(
     

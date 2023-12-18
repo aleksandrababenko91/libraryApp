@@ -40,22 +40,22 @@ const MainPage = () => {
       <h2 className="pb-2 border-bottom">Why you have to come to our Library?</h2>
       <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div className="feature col">
-          <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3" style={featureIconStyle}>
-            <img src="./briefcase.svg" alt="case image" height="40" />
+          <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-white fs-2 mb-3" style={featureIconStyle}>
+            <img src="./src/images/book.svg" alt="book image" height="40" />
           </div>
           <h3 className="fs-2 text-body-emphasis">Book Borrowing for more than 40 days:</h3>
           <p>Explore our website to uncover a wealth of resources, events, and opportunities tailored to ignite your imagination, fuel your curiosity, and enrich your life.</p>
         </div>
         <div className="feature col">
-          <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3" style={featureIconStyle}>
-            <img src="./bus-front.svg" alt="bus image" height="40" />
+          <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-white fs-2 mb-3" style={featureIconStyle}>
+            <img src="./src/images/wifi.svg" alt="wifi image" height="40" />
           </div>
           <h3 className="fs-2 text-body-emphasis">Internet Access:</h3>
           <p>We offer free internet access and computer facilities, bridging the digital divide for those who may not have access at home.</p>
         </div>
         <div className="feature col">
-          <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3" style={featureIconStyle}>
-            <img src="./chat-square-heart.svg" alt="heart image" height="40" />
+          <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-white fs-2 mb-3" style={featureIconStyle}>
+            <img src="./src/images/balloon-heart-fill.svg" alt="baloon image" height="40" />
           </div>
           <h3 className="fs-2 text-body-emphasis">Community Events</h3>
           <p>Our library frequently organizes community events like book clubs, author talks, lectures, and cultural programs to engage and connect people.</p>
@@ -75,10 +75,10 @@ const MainPage = () => {
             <img src="src/images/image1.jpeg" className="d-block w-100" alt="Slide 1" />
           </div>
           <div className="carousel-item">
-            <img src="src/images/image2.jpeg" className="d-block w-100" alt="Slide 2" />
+            <img src="src/images/image2.jpg" className="d-block w-100" alt="Slide 2" />
           </div>
           <div className="carousel-item">
-            <img src="src/images/image2.jpg" className="d-block w-100" alt="Slide 3" />
+            <img src="src/images/image3.jpg" className="d-block w-100" alt="Slide 3" />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

@@ -3,20 +3,23 @@ import { useState } from 'react'
 import PropTypes from 'prop-types';
 import BookService from './BookService'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Form, Button } from 'react-bootstrap';  
+import { Container, Form, Button, Alert } from 'react-bootstrap';  
 
 
-const RegisterForm = ({handleLogIn}) => {
+const RegisterForm = ({handleLogIn, baseUrl}) => {
   const [newUser, setNewUser] = useState([])
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
   const [errors, setErrors] = useState({})
+  const [successMessage, setSuccessMessage] = useState('');
+
   const handleErrors = () => {
     const currentErrors = {}
-    if(email.length < 5) {
-      currentErrors.email = "Email must include at least 5 letters"
+    if(email.length < 5 || baseUrl.users.some(user => user.email === email)) {
+      currentErrors.email = "Email must include at least 5 letters or email already exist"
     }
+   
     if(name.length < 1) {
       currentErrors.name = "Name must include at least 1 letter"
     }
@@ -43,6 +46,7 @@ const RegisterForm = ({handleLogIn}) => {
   }
   
   const addUser = (email, name, password) => {
+
     const userInfo = {
       name: name,
       email: email,
@@ -52,11 +56,17 @@ const RegisterForm = ({handleLogIn}) => {
       .create(userInfo)
        .then(returnedUser => {
        setNewUser([...newUser, returnedUser])
+       setSuccessMessage('Registration Successful!');
       })
+      .catch(error => {
+        // Handle errors if any occurred during user creation
+        console.error('Error creating user:', error);
+      });
   }
   
   return (
     <Container fluid >
+      {successMessage && <Alert variant="success">{successMessage}</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>

@@ -9,13 +9,13 @@
       "copies": [
         {
           "id": 1,
-          "borrower": null,
+          "borrower": 6,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 2,
-          "borrower": null,
+          "borrower": 6,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -42,7 +42,7 @@
         },
         {
           "id": 2,
-          "borrower": null,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -90,7 +90,7 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -117,7 +117,7 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 5,
+          "borrower": null,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
@@ -225,9 +225,9 @@
       "id": 3
     },
     {
-      "name": "Petri",
-      "email": "petri@gmail.com",
-      "password": "petri",
+      "name": "Nicolas",
+      "email": "nicolas@gmail.com",
+      "password": "Nic",
       "id": 4
     },
     {
@@ -235,6 +235,84 @@
       "email": "saarasairanen@gmail.com",
       "password": "saara",
       "id": 5
+    },
+    {
+      "name": "Evgeny",
+      "email": "fedinho8@gmail.com",
+      "password": "Mehanika",
+      "id": 6
+    },
+    {
+      "name": "ddododododo",
+      "email": "fhfhfhh@bbdbd.com",
+      "password": "dhhdhdhdhdhdh",
+      "id": 7
+    },
+    {
+      "name": "ddddd",
+      "email": "saara@gmail.com",
+      "password": "sssssss",
+      "id": 8
+    },
+    {
+      "name": "ddddd",
+      "email": "saara@gmail.com",
+      "password": "sssssss",
+      "id": 9
+    },
+    {
+      "name": "ddddd",
+      "email": "saara@gmail.com",
+      "password": "sssssss",
+      "id": 10
+    },
+    {
+      "name": "ddddd",
+      "email": "saara@gmail.com",
+      "password": "sssssss",
+      "id": 11
+    },
+    {
+      "name": "ddddd",
+      "email": "saara@gmail.com",
+      "password": "sssssss",
+      "id": 12
+    },
+    {
+      "name": "ddddd",
+      "email": "saara@gmail.com",
+      "password": "sssssss",
+      "id": 13
+    },
+    {
+      "name": "hghghghghgh",
+      "email": "aleksandra@gamol.com",
+      "password": "ghhghghghhgh",
+      "id": 14
+    },
+    {
+      "name": "ddjdjjdjdjd",
+      "email": "fdfdff@gamciol.com",
+      "password": "dhhdhdhdhdh",
+      "id": 15
+    },
+    {
+      "name": "ddddd",
+      "email": "saarasairanen@gmail.com",
+      "password": "dddddd",
+      "id": 16
+    },
+    {
+      "name": "ewwwwwww",
+      "email": "aleksandrababenko91@gmail.com",
+      "password": "wwwwwww",
+      "id": 17
+    },
+    {
+      "name": "ghhghghgh",
+      "email": "ghhghghgh@gmail.com",
+      "password": "ghghhghhg",
+      "id": 18
     }
   ]
 }

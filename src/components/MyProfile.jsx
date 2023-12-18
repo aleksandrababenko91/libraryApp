@@ -7,8 +7,8 @@ import Row from 'react-bootstrap/Row';
 
 const pictureStyle ={ width: '100px', height: '50' }  
 const buttonStyle ={                                 
-  backgroundColor:" hsl(200, 100%, 50%)", 
-  color: "white",
+  backgroundColor: '#e9e4ab', 
+  color: "black",
   padding: "10px, 20px",
   marginLeft: "20px",
   marginBottom: "10px",
@@ -18,18 +18,16 @@ const buttonStyle ={
 
 }
 
-const MyProfile = ({currentUser, books}) => {
+const MyProfile = ({currentUser, books, returnBook}) => {
   const myCopies = books.filter(book => book.copies.some(copy => copy.borrower === currentUser.id))
   console.log(myCopies);
   
-  
   return(
-      <div style={{ width: '90vw', height: '90vh' }}>
-        <h1 className="display-4 fw-bold text-body-emphasis">Hello, {currentUser.name} </h1>
-        {/* <h2 className="p-3">Book: {myCopies.map(book => book.title)} </h2> */}
-        <Container className="container">
+      <div style={{ width: '90vw', height: '90vh', paddingRight: '120px', paddingTop: '30px'}}>
+        <h1 className="display-4  text-body-emphasis ">Hello, {currentUser.name} </h1>
+        <Container  style={{ paddingTop: '50px'}} className="container">
           <Row>
-          <Col>
+          <Col sm={4}>
            <table className="table table-striped">
              <thead>
                <tr>
@@ -43,7 +41,7 @@ const MyProfile = ({currentUser, books}) => {
              </tbody>
            </table>
           </Col>
-          <Col>
+          <Col sm={8}>
           <table className="book-info">
              <thead>
                <tr>
@@ -63,7 +61,7 @@ const MyProfile = ({currentUser, books}) => {
                         <td>{copy.dueDate}</td>
                         <td><img style={pictureStyle} src={book.url} alt={book.title} /></td>
                         <td>
-                          <Button style={buttonStyle}>Return book</Button>
+                          <Button onClick={() => returnBook(book.id)}style={buttonStyle}>Return book</Button>
                           </td>
                           <td>
                             <Button style={buttonStyle}>Extend book</Button>

@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Form, Button } from 'react-bootstrap';  
+import { Container, Form, Button, Alert } from 'react-bootstrap';  
 
-const UserLoginForm = ({handleLogIn}) => {
+const UserLoginForm = ({handleLogIn, currentUser}) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [errors, setErrors] = useState({})
+  const [successMessage, setSuccessMessage] = useState('');
+
   const handleErrors = () => {
     const currentErrors = {}
     if(email.length < 5) {
@@ -32,12 +34,13 @@ const UserLoginForm = ({handleLogIn}) => {
     handleLogIn(email, password)
     const userInfo = {email:email, password:password}
     console.log(userInfo);
-  }
- 
+    setSuccessMessage('Welcome ');
 
-    
+  }
+  
   return (
     <Container fluid>
+      {successMessage && <Alert variant="success">{successMessage}, {currentUser.name}</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Email</Form.Label>

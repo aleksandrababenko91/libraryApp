@@ -71,7 +71,38 @@ function App() {
       }
   }
  
-    
+  const returnBook = (id) => {
+    const filteredBooksById = books.filter(book => book.id === id)      //iterate to find the boook with  current Id
+    const bookCurrentId = filteredBooksById[0]
+    //console.log(bookCurrentId); //return object with current book
+      if (bookCurrentId) {
+        const borrowedCopies = bookCurrentId.copies.filter(copy => copy.borrower === currentUser.id); //iterate for borrower === null 
+       // console.log(borrowedCopies);  //return array of object with available copy (borrower = null)
+        const updatedReturnCopy = {...borrowedCopies[0], borrower: null} 
+        //console.log(updatedReturnCopy);  //update 1 copYYYY!!!! and add borrower
+        const updatedReturnCopies = bookCurrentId.copies.map(copy => {  //iterate and compare current book and update an array of copiESSSSS!!!
+          if(copy.id === updatedReturnCopy.id) {
+            return updatedReturnCopy
+          } else {
+            return copy;
+          }
+        })
+        //console.log(updatedReturnCopies);
+      const updatedReturnBook = {...bookCurrentId, copies: updatedReturnCopies} //update an array of Current BOOK
+      console.log(updatedReturnBook);
+       BookService
+        .update(id, updatedReturnBook)
+        .then(
+          setBooks(books.map(book => {
+            if(book.id === id) {
+              return updatedReturnBook
+            }else {
+              return book
+            }
+          }))
+        )
+      }
+  }
 
   return (
     <Router>
@@ -82,8 +113,8 @@ function App() {
       <Route path="/" element={<MainPage />} />
       <Route path="/RegisterForm" element={<RegisterForm  handleLogIn={handleLogIn} />} />
       <Route path="/BookList" element={<BookList addBook={addBook} books={books}/>} />
-      <Route path="/UserLoginForm" element={<UserLoginForm handleLogIn={handleLogIn}/>} />
-      <Route path="/MyProfile" element={<MyProfile books={books} currentUser={currentUser}/> }/>
+      <Route path="/UserLoginForm" element={<UserLoginForm currentUser={currentUser} handleLogIn={handleLogIn}/>} />
+      <Route path="/MyProfile" element={<MyProfile returnBook={returnBook} books={books} currentUser={currentUser}/> }/>
 
     </Routes>
     </Router>

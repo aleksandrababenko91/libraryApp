@@ -1,16 +1,13 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@100;400;606&display=swap');
-
-  *{
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700;1,900&display=swap');    *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-  }
+    font-family: 'Playfair Display', serif;  }
 
   :root{
-    --mainColor: #5c5829;
-    --mainColorLight: #a7aa57;
+    --mainColor: #e9e4ab;
+    --mainColorLight: #e0e293;
     --secondaryColor: #DB2B39;
     --textColor: #eee;
 
