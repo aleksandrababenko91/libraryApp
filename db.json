@@ -9,21 +9,21 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 6,
-          "borrowedDate": "2023-12-04",
-          "dueDate": "2023-12-14"
+          "borrower": 9,
+          "borrowedDate": "2023-12-24T10:21:01.002Z",
+          "dueDate": "2023-12-24T10:21:01.002Z"
         },
         {
           "id": 2,
           "borrower": 6,
-          "borrowedDate": "2023-12-04",
-          "dueDate": "2023-12-14"
+          "borrowedDate": "null",
+          "dueDate": "null"
         },
         {
           "id": 3,
           "borrower": null,
-          "borrowedDate": "Tue Dec 19 2023",
-          "dueDate": 1703405079934
+          "borrowedDate": "2023-12-24T10:11:58.608Z",
+          "dueDate": "2023-12-24T10:11:58.608Z"
         }
       ]
     },
@@ -37,8 +37,8 @@
         {
           "id": 1,
           "borrower": null,
-          "borrowedDate": "2023-12-24T09:13:05.535Z",
-          "dueDate": "2023-12-24T09:13:05.535Z"
+          "borrowedDate": "2023-12-24T10:15:17.425Z",
+          "dueDate": "2023-12-24T10:15:17.425Z"
         },
         {
           "id": 2,
@@ -49,8 +49,8 @@
         {
           "id": 3,
           "borrower": null,
-          "borrowedDate": null,
-          "dueDate": null
+          "borrowedDate": "null",
+          "dueDate": "null"
         }
       ]
     },
@@ -63,7 +63,7 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 9,
+          "borrower": 6,
           "borrowedDate": "2023-12-24T09:24:30.262Z",
           "dueDate": "2023-12-24T09:24:30.262Z"
         },
@@ -76,8 +76,8 @@
         {
           "id": 3,
           "borrower": null,
-          "borrowedDate": null,
-          "dueDate": null
+          "borrowedDate": "null",
+          "dueDate": "null"
         }
       ]
     },
@@ -90,21 +90,21 @@
       "copies": [
         {
           "id": 1,
-          "borrower": null,
-          "borrowedDate": "2023-12-24T09:23:12.599Z",
-          "dueDate": "2023-12-24T09:23:12.599Z"
+          "borrower": 6,
+          "borrowedDate": "2023-12-24T09:38:40.097Z",
+          "dueDate": "2023-12-24T09:38:40.097Z"
         },
         {
           "id": 2,
-          "borrower": null,
-          "borrowedDate": "2023-12-04",
-          "dueDate": "2023-12-14"
+          "borrower": 6,
+          "borrowedDate": "2023-12-24T10:03:28.684Z",
+          "dueDate": "2023-12-24T10:03:28.684Z"
         },
         {
           "id": 3,
-          "borrower": null,
-          "borrowedDate": null,
-          "dueDate": null
+          "borrower": 6,
+          "borrowedDate": "2023-12-24T10:06:04.973Z",
+          "dueDate": "2023-12-24T10:06:04.973Z"
         }
       ]
     },
@@ -117,21 +117,21 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 9,
-          "borrowedDate": "2023-12-24T09:26:59.462Z",
-          "dueDate": "2023-12-24T09:26:59.462Z"
+          "borrower": 5,
+          "borrowedDate": "2023-12-24T09:46:42.289Z",
+          "dueDate": "2023-12-24T09:46:42.289Z"
         },
         {
           "id": 2,
-          "borrower": null,
-          "borrowedDate": "2023-12-04",
-          "dueDate": "2023-12-14"
+          "borrower": 5,
+          "borrowedDate": "2023-12-24T09:46:59.715Z",
+          "dueDate": "2023-12-24T09:46:59.715Z"
         },
         {
           "id": 3,
-          "borrower": null,
-          "borrowedDate": null,
-          "dueDate": null
+          "borrower": 5,
+          "borrowedDate": "null",
+          "dueDate": "null"
         }
       ]
     },
@@ -144,9 +144,9 @@
       "copies": [
         {
           "id": 1,
-          "borrower": null,
-          "borrowedDate": "2023-12-04",
-          "dueDate": "2023-12-14"
+          "borrower": 4,
+          "borrowedDate": "2023-12-24T09:47:27.085Z",
+          "dueDate": "2023-12-24T09:47:27.085Z"
         }
       ]
     },
@@ -159,21 +159,21 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 9,
+          "borrower": 4,
           "borrowedDate": "2023-12-24T09:30:37.219Z",
           "dueDate": "2023-12-24T09:30:37.219Z"
         },
         {
           "id": 2,
-          "borrower": null,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
-          "borrower": null,
-          "borrowedDate": null,
-          "dueDate": null
+          "borrower": 5,
+          "borrowedDate": "null",
+          "dueDate": "null"
         }
       ]
     },
@@ -186,21 +186,21 @@
       "copies": [
         {
           "id": 1,
-          "borrower": 9,
-          "borrowedDate": "2023-12-24T09:30:32.797Z",
-          "dueDate": "2023-12-24T09:30:32.797Z"
+          "borrower": 5,
+          "borrowedDate": "2023-12-24T09:42:39.011Z",
+          "dueDate": "2023-12-24T09:42:39.011Z"
         },
         {
           "id": 2,
-          "borrower": null,
+          "borrower": 5,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
           "borrower": null,
-          "borrowedDate": null,
-          "dueDate": null
+          "borrowedDate": "null",
+          "dueDate": "null"
         }
       ]
     },
@@ -213,21 +213,21 @@
       "copies": [
         {
           "id": 1,
-          "borrower": null,
-          "borrowedDate": "2023-12-04",
-          "dueDate": "2023-12-14"
+          "borrower": 6,
+          "borrowedDate": "2023-12-24T09:59:22.617Z",
+          "dueDate": "2023-12-24T09:59:22.617Z"
         },
         {
           "id": 2,
-          "borrower": null,
+          "borrower": 2,
           "borrowedDate": "2023-12-04",
           "dueDate": "2023-12-14"
         },
         {
           "id": 3,
           "borrower": null,
-          "borrowedDate": null,
-          "dueDate": null
+          "borrowedDate": "null",
+          "dueDate": "null"
         }
       ]
     }

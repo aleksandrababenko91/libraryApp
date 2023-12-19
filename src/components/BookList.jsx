@@ -4,6 +4,8 @@ import { useState } from 'react';
 const BookList = ({books, addBook}) => {
   
   const [searchQuery, setSearchQuery] = useState("");
+ ///const [successMessage, setSuccessMessage] = useState('');  !!!!!!!!
+
   
 
   const bookCardStyle = {
@@ -28,16 +30,16 @@ const BookList = ({books, addBook}) => {
 <input className="search" value={searchQuery} placeholder="search books" type="text" onChange={handleSearchQuery}/>
 
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }} >
-    { books.map(book1 => (
-      filteredBooks.map((book2) => (
-        <div key={book2.id} style={bookCardStyle}>
-          <img src={book2.url} style={{ width: '10vw', height: '30vh' }}/>
+    { books.map(book => (
+      filteredBooks.map((book) => (
+        <div key={book.id} style={bookCardStyle}>
+          <img src={book.url} style={{ width: '10vw', height: '30vh' }}/>
           <div className='mt-4'>
-            <h5 style={{fontStyle: 'italic', m: 1 }}>{book2.title}</h5>
-            <h7>{book2.author}</h7>
+            <h5 style={{fontStyle: 'italic', m: 1 }}>{book.title}</h5>
+            <h7>{book.author}</h7>
           </div>
           <div className='mt-4 flex justify-between items-center'>
-            <button onClick={() => addBook(book2.id)} className='px-4 py-2 bg-gray-800 text-black text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700'>Add to cart</button>
+            <button onClick={() => addBook(book.id)} className='px-4 py-2 bg-gray-800 text-black text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700'>Add to cart</button>
           </div>
         </div>
       )
