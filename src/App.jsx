@@ -45,8 +45,13 @@ function App() {
       if (bookCurrentId) {
         const availableCopies = bookCurrentId.copies.filter(copy => copy.borrower === null); //iterate for borrower === null 
        // console.log(availableCopies);  //return array of object with available copy (borrower = null)
-        const updatedCopy = {...availableCopies[0], borrower: currentUser.id} 
-        //console.log(updatedCopy);  //update 1 copYYYY!!!! and add borrower
+       const currentDate = new Date();
+       console.log(currentDate);
+      
+       const dueDate = new Date(currentDate.setDate(currentDate.getDate() + 5));
+       console.log(dueDate);
+       const updatedCopy = {...availableCopies[0], borrower: currentUser.id, borrowedDate: currentDate, dueDate: dueDate} 
+        console.log(updatedCopy);  //update 1 copYYYY!!!! and add borrower
         const updatedCopies = bookCurrentId.copies.map(copy => {  //iterate and compare current book and update an array of copiESSSSS!!!
           if(copy.id === updatedCopy.id) {
             return updatedCopy
@@ -54,7 +59,7 @@ function App() {
             return copy;
           }
         })
-        //console.log(updatedCopies);
+        console.log(updatedCopies);
       const updatedBook = {...bookCurrentId, copies: updatedCopies} //update an array of Current BOOK
       console.log(updatedBook);
        BookService
