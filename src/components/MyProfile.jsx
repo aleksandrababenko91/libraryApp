@@ -20,19 +20,20 @@ const buttonStyle ={
 }
 
 const MyProfile = ({currentUser, books, returnBook, setBooks}) => {
+   
 
   const extendBook = (bookId, copyId) => {
-    const filteredBooksById = books.filter(book => bookId === id)      //iterate to find the boook with  current Id
+    const filteredBooksById = books.filter(book => bookId === book.id)      //iterate to find the boook with  current Id
     const bookCurrentId = filteredBooksById[0]
     //console.log(bookCurrentId); //return object with current book
       if (bookCurrentId) {
-        const filteredCopy = bookCurrentId.copies.filter(copy => copy.id === copyId); //iterate for borrower === null 
+        const filteredCopy = bookCurrentId.copies.filter(copy => copyId=== copy.id); //iterate for borrower === null 
        // console.log(availableCopies);  //return array of object with available copy (borrower = null)   
        const currentDate = new Date();
        const dueDate = new Date(currentDate.setDate(currentDate.getDate() + 5));
        const extendDate = new Date(dueDate.setDate(dueDate.getDate() + 10)); //extend Date
-       console.log(extendDate);
-       const updatedExtendDate = {...filteredCopy[0], dueDate: extendDate} 
+       //console.log(extendDate);
+       const updatedExtendDate = {...filteredCopy[0], dueDate: extendDate.toISOString()} 
         //console.log(updatedCopy);  //update 1 copYYYY!!!! and add borrower
         const updatedCopies = bookCurrentId.copies.map(copy => {  //iterate and compare current book and update an array of copiESSSSS!!!
           if(copy.id === updatedExtendDate.id) { // compare the copy of current book and id of copy which extend
@@ -43,12 +44,12 @@ const MyProfile = ({currentUser, books, returnBook, setBooks}) => {
         })
         //console.log(updatedCopies);
       const updatedBook = {...bookCurrentId, copies: updatedCopies} //update an array of Current BOOK
-      console.log(updatedBook);
+      //console.log(updatedBook);
        BookService
-        .update(id, updatedBook)
+        .update(bookId, updatedBook)
         .then(
           setBooks(books.map(book => {
-            if(book.id === id) {
+            if(book.id === bookId) {
               return updatedBook
             }else {
               return book
@@ -59,7 +60,7 @@ const MyProfile = ({currentUser, books, returnBook, setBooks}) => {
   }
 
   const myCopies = books.filter(book => book.copies.some(copy => copy.borrower === currentUser.id))
-  console.log(myCopies);
+  //console.log(myCopies);
   
   return(
     <div style={{ width: '90vw', height: '90vh', paddingRight: '120px', paddingTop: '30px'}}>
@@ -103,7 +104,7 @@ const MyProfile = ({currentUser, books, returnBook, setBooks}) => {
                             <Button onClick={() => returnBook(book.id)}style={buttonStyle}>Return book</Button>
                             </td>
                             <td>
-                              <Button  style={buttonStyle}>Extend book</Button>
+                              <Button onClick={() => extendBook(book.id, copy.id)} style={buttonStyle}>Extend book</Button>
                             </td>
 
 

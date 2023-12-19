@@ -4,10 +4,7 @@ import { useState } from 'react';
 const BookList = ({books, addBook}) => {
   
   const [searchQuery, setSearchQuery] = useState("");
- ///const [successMessage, setSuccessMessage] = useState('');  !!!!!!!!
-
-  
-
+ 
   const bookCardStyle = {
     background: '#e9e4ab',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -30,8 +27,8 @@ const BookList = ({books, addBook}) => {
 <input className="search" value={searchQuery} placeholder="search books" type="text" onChange={handleSearchQuery}/>
 
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }} >
-    { books.map(book => (
-      filteredBooks.map((book) => (
+    { 
+        filteredBooks.map((book) => (
         <div key={book.id} style={bookCardStyle}>
           <img src={book.url} style={{ width: '10vw', height: '30vh' }}/>
           <div className='mt-4'>
@@ -43,7 +40,7 @@ const BookList = ({books, addBook}) => {
           </div>
         </div>
       )
-      ))
+      
     )}
   </div>
 </div>

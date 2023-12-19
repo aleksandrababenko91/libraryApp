@@ -33,6 +33,7 @@ const RegisterForm = ({handleLogIn, baseUrl}) => {
   }
   const handleSubmit = (event) => {
     event.preventDefault()
+    // check if user exists in Book service
     addUser(email, name, password)
     const errors = handleErrors()
     if(Object.values(errors).length > 0) {
